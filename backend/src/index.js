@@ -10,6 +10,7 @@ connectDb()
   .then(() => {
     app.listen(PORT, () => {
       console.log(`server is running on port ${PORT}`);
+      console.log(`CORS allowed origin: ${process.env.FRONTEND_URL || 'http://localhost:5173'}`);
     });
   })
   .catch(() => {
